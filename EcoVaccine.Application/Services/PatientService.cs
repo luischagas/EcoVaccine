@@ -32,7 +32,7 @@ namespace EcoVaccine.Application.Services
 
         public async Task<IAppServiceResponse> GetToken()
         {
-            var data = _healthApiService.CallMethod(Method.GET, "/api/Desafio/GetToken");
+            var data = _healthApiService.CallMethod(Method.GET, "/api/Desafio/GetToken"); 
 
             if (data.IsSuccessful)
             {
