@@ -1,10 +1,10 @@
 ﻿namespace EcoVaccine.Application.Common
 {
-    public class HealthApiResponse
+    public class HealthApiResponse<T>
     {
         #region Properties
 
-        public string Data { get; set; }
+        public T Data { get; set; }
         public string Mensagem { get; set; }
         public string ProximaEtapa { get; set; }
         public int StatusCode { get; set; }

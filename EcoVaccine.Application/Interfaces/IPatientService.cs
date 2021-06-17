@@ -6,8 +6,9 @@ namespace EcoVaccine.Application.Interfaces
     {
         #region Methods
 
-        Task<IAppServiceResponse> GetToken();
+        Task<IAppServiceResponse> GetPatient();
 
+        Task<IAppServiceResponse> GetToken();
         #endregion Methods
     }
 }
