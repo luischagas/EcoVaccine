@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Threading.Tasks;
+using EcoVaccine.Application.Models.Patient.Request;
 using EcoVaccine.Application.Models.Patient.Response;
 
 namespace EcoVaccine.Application.Services
@@ -35,16 +36,13 @@ namespace EcoVaccine.Application.Services
         {
             var data = _healthApiService.CallMethod(Method.GET, "/api/Desafio/GetToken"); 
 
-            if (data.IsSuccessful)
+            if (data.IsSuccessful && string.IsNullOrEmpty(data.Content) is false)
             {
-                if (string.IsNullOrEmpty(data.Content) is false)
-                {
-                    var healthApiResponse = JsonConvert.DeserializeObject<HealthApiResponse<string>>(data.Content);
+                var healthApiResponse = JsonConvert.DeserializeObject<HealthApiResponse<string>>(data.Content);
 
-                    _httpContextAccessor.HttpContext.Session.Set("token", healthApiResponse.Data);
+                _httpContextAccessor.HttpContext.Session.Set("token", healthApiResponse.Data);
 
-                    return new AppServiceResponse<object>(null, "Token obtido com sucesso.", true);
-                }
+                return new AppServiceResponse<object>(null, "Token obtido com sucesso.", true);
             }
 
             return new AppServiceResponse<object>(null, "Erro ao obter Token", false);
@@ -59,18 +57,30 @@ namespace EcoVaccine.Application.Services
 
             var data = _healthApiService.CallMethod(Method.GET, "/api/Desafio/GetPaciente", null, token);
 
-            if (data.IsSuccessful)
+            if (data.IsSuccessful && string.IsNullOrEmpty(data.Content) is false)
             {
-                if (string.IsNullOrEmpty(data.Content) is false)
-                {
-                    var healthApiResponse = JsonConvert.DeserializeObject<HealthApiResponse<PatientResponse>>(data.Content);
+                var healthApiResponse = JsonConvert.DeserializeObject<HealthApiResponse<PatientResponse>>(data.Content);
 
-                    if (healthApiResponse != null)
-                        return new AppServiceResponse<PatientResponse>(healthApiResponse.Data, "Paciente obtido com sucesso.", true);
-                }
+                if (healthApiResponse != null)
+                    return new AppServiceResponse<PatientResponse>(healthApiResponse.Data, "Paciente obtido com sucesso.", true);
             }
 
             return new AppServiceResponse<PatientResponse>(null, "Erro ao obter o Paciente", false);
+        }
+
+        public async Task<IAppServiceResponse> UpdatePatient(PatientRequest request)
+        {
+            var token = _httpContextAccessor.HttpContext.Session.Get<string>("token");
+
+            if (token is null)
+                return new AppServiceResponse<PatientResponse>(null, "É necessário obter o token primeiro", false);
+
+            var data = _healthApiService.CallMethod(Method.POST, "/api/Desafio/UpdatePaciente", request, token);
+
+            if (data.IsSuccessful)
+                return new AppServiceResponse<string>(null, "Paciente alterado com sucesso.", true);
+
+            return new AppServiceResponse<PatientResponse>(null, "Erro ao alterar o Paciente", false);
         }
 
         #endregion Methods

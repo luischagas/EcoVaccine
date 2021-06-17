@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using EcoVaccine.Application.Models.Patient.Request;
+using System.Threading.Tasks;
 
 namespace EcoVaccine.Application.Interfaces
 {
@@ -9,6 +10,9 @@ namespace EcoVaccine.Application.Interfaces
         Task<IAppServiceResponse> GetPatient();
 
         Task<IAppServiceResponse> GetToken();
+
+        Task<IAppServiceResponse> UpdatePatient(PatientRequest request);
+
         #endregion Methods
     }
 }

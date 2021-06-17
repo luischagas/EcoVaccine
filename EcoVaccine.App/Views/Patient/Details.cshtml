@@ -1,4 +1,4 @@
-﻿@model EcoVaccine.Application.Common.AppServiceResponse<EcoVaccine.Application.Models.Patient.Response.PatientResponse>
+﻿@model EcoVaccine.Application.Models.Patient.Response.PatientResponse
 
 @{
     ViewData["Title"] = "Paciente";
@@ -9,44 +9,35 @@
 <div>
     <hr />
     <dl class="row">
-        @if (Model.Success == false)
-        {
-            <dt class="col-sm-2">
-                @Model.Message
-            </dt>
-        }
-        else
-        {
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Data.Name)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Data.Name)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Data.Email)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Data.Email)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Data.Phone)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Data.Phone)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Data.Gender)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Data.Gender)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Data.Neighborhood)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Data.Neighborhood)
-            </dd>
-        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Neighborhood)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Neighborhood)
+        </dd>
     </dl>
 </div>
