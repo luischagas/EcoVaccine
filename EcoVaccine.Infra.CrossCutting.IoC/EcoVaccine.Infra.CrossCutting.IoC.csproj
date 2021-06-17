@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcoVaccine.Application\EcoVaccine.Application.csproj" />
+    <ProjectReference Include="..\EcoVaccine.Infra\EcoVaccine.Infra.CrossCutting.Services.csproj" />
+  </ItemGroup>
+
+</Project>

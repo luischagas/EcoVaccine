@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcoVaccine.Application\EcoVaccine.Application.csproj" />
+    <ProjectReference Include="..\EcoVaccine.Domain\EcoVaccine.Domain.csproj" />
+    <ProjectReference Include="..\EcoVaccine.Infra.CrossCutting.IoC\EcoVaccine.Infra.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\EcoVaccine.Infra\EcoVaccine.Infra.CrossCutting.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
