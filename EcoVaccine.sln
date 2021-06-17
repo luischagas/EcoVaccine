@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Application", "EcoVaccine.Application\EcoVaccine.Application.csproj", "{A651C05C-5696-4B07-A897-9F13133620DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Domain", "EcoVaccine.Domain\EcoVaccine.Domain.csproj", "{86D743C0-6212-4120-BCBF-6DE60A6A030D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Domain.Shared", "EcoVaccine.Domain\EcoVaccine.Domain.Shared.csproj", "{86D743C0-6212-4120-BCBF-6DE60A6A030D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Infra.CrossCutting.Services", "EcoVaccine.Infra\EcoVaccine.Infra.CrossCutting.Services.csproj", "{E976C91D-5708-4EF8-890D-2D155BA87366}"
 EndProject
