@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{A97F3BCC-1999-421C-BA91-201B7C0F84E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Application", "EcoVaccine.Application\EcoVaccine.Application.csproj", "{A651C05C-5696-4B07-A897-9F13133620DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoVaccine.Application", "EcoVaccine.Application\EcoVaccine.Application.csproj", "{A651C05C-5696-4B07-A897-9F13133620DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Domain.Shared", "EcoVaccine.Domain\EcoVaccine.Domain.Shared.csproj", "{86D743C0-6212-4120-BCBF-6DE60A6A030D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoVaccine.Domain.Shared", "EcoVaccine.Domain\EcoVaccine.Domain.Shared.csproj", "{86D743C0-6212-4120-BCBF-6DE60A6A030D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Infra.CrossCutting.Services", "EcoVaccine.Infra\EcoVaccine.Infra.CrossCutting.Services.csproj", "{E976C91D-5708-4EF8-890D-2D155BA87366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoVaccine.Infra.CrossCutting.IoC", "EcoVaccine.Infra.CrossCutting.IoC\EcoVaccine.Infra.CrossCutting.IoC.csproj", "{437FD0B1-876F-45AB-822E-C1D9030CC3C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.Infra.CrossCutting.IoC", "EcoVaccine.Infra.CrossCutting.IoC\EcoVaccine.Infra.CrossCutting.IoC.csproj", "{437FD0B1-876F-45AB-822E-C1D9030CC3C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoVaccine.App", "EcoVaccine.App\EcoVaccine.App.csproj", "{DFB25755-44F0-43E0-88F4-F58230A78915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoVaccine.App", "EcoVaccine.App\EcoVaccine.App.csproj", "{DFB25755-44F0-43E0-88F4-F58230A78915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoVaccine.Infra.CrossCutting.Services", "EcoVaccine.Infra.CrossCutting.Services\EcoVaccine.Infra.CrossCutting.Services.csproj", "{342FDCEB-AA1D-4426-8139-0A5E0B98DFD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{86D743C0-6212-4120-BCBF-6DE60A6A030D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86D743C0-6212-4120-BCBF-6DE60A6A030D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86D743C0-6212-4120-BCBF-6DE60A6A030D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E976C91D-5708-4EF8-890D-2D155BA87366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E976C91D-5708-4EF8-890D-2D155BA87366}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E976C91D-5708-4EF8-890D-2D155BA87366}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E976C91D-5708-4EF8-890D-2D155BA87366}.Release|Any CPU.Build.0 = Release|Any CPU
 		{437FD0B1-876F-45AB-822E-C1D9030CC3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{437FD0B1-876F-45AB-822E-C1D9030CC3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{437FD0B1-876F-45AB-822E-C1D9030CC3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +43,10 @@ Global
 		{DFB25755-44F0-43E0-88F4-F58230A78915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFB25755-44F0-43E0-88F4-F58230A78915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFB25755-44F0-43E0-88F4-F58230A78915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342FDCEB-AA1D-4426-8139-0A5E0B98DFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342FDCEB-AA1D-4426-8139-0A5E0B98DFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342FDCEB-AA1D-4426-8139-0A5E0B98DFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342FDCEB-AA1D-4426-8139-0A5E0B98DFD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,9 +54,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A651C05C-5696-4B07-A897-9F13133620DB} = {F240578A-4969-4B7D-978D-F10D31F36F70}
 		{86D743C0-6212-4120-BCBF-6DE60A6A030D} = {70DF8622-A512-46E6-92E8-A6A5449FA2A4}
-		{E976C91D-5708-4EF8-890D-2D155BA87366} = {A97F3BCC-1999-421C-BA91-201B7C0F84E1}
 		{437FD0B1-876F-45AB-822E-C1D9030CC3C5} = {A97F3BCC-1999-421C-BA91-201B7C0F84E1}
 		{DFB25755-44F0-43E0-88F4-F58230A78915} = {FECD504A-9E29-45BF-AD88-DE9C3E28B42C}
+		{342FDCEB-AA1D-4426-8139-0A5E0B98DFD5} = {A97F3BCC-1999-421C-BA91-201B7C0F84E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E194D890-04B1-4182-A20D-83905CFF1B3C}

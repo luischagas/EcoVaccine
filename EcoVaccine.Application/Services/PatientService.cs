@@ -1,13 +1,13 @@
 ﻿using EcoVaccine.Application.Common;
 using EcoVaccine.Application.Interfaces;
-using EcoVaccine.Domain.Shared.Services.HealthApi;
-using EcoVaccine.Domain.Shared.Utils;
-using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
-using RestSharp;
-using System.Threading.Tasks;
 using EcoVaccine.Application.Models.Patient.Request;
 using EcoVaccine.Application.Models.Patient.Response;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
+using EcoVaccine.Domain.Shared.Services.HealthApi;
+using EcoVaccine.Domain.Shared.Utils;
+using RestSharp;
 
 namespace EcoVaccine.Application.Services
 {
@@ -34,7 +34,7 @@ namespace EcoVaccine.Application.Services
 
         public async Task<IAppServiceResponse> GetToken()
         {
-            var data = _healthApiService.CallMethod(Method.GET, "/api/Desafio/GetToken"); 
+            var data = _healthApiService.CallMethod(Method.GET, "/api/Desafio/GetToken");
 
             if (data.IsSuccessful && string.IsNullOrEmpty(data.Content) is false)
             {

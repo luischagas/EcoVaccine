@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EcoVaccine.Application\EcoVaccine.Application.csproj" />
-    <ProjectReference Include="..\EcoVaccine.Infra\EcoVaccine.Infra.CrossCutting.Services.csproj" />
   </ItemGroup>
 
 </Project>
